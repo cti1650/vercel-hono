@@ -7,6 +7,7 @@ const port = process.env.PORT || 3000;
 const main = async () => {
   console.log(`Server is running on http://localhost:${port}`)
   app.use("/static/*", serveStatic({ root: "./" }));
+  app.use("/", serveStatic({ path: "static/index.html" }));
   serve({
     fetch: app.fetch,
     port: Number(port),
