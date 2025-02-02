@@ -1,13 +1,17 @@
 {
   "name": "vercel-hono",
   "scripts": {
+    "dev": "tsx watch api/index.ts",
     "start": "vercel dev",
     "deploy": "vercel"
   },
   "dependencies": {
+    "@hono/node-server": "^1.13.8",
     "hono": "^4.6.20"
   },
   "devDependencies": {
+    "@types/node": "^22.13.0",
+    "tsx": "^4.19.2",
     "vercel": "^32.4.1"
   }
 }
