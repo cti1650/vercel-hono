@@ -1,7 +1,7 @@
 {
   "name": "vercel-hono",
   "scripts": {
-    "dev": "tsx watch api/index.ts",
+    "dev": "tsx watch src/serve.ts",
     "start": "vercel dev",
     "deploy": "vercel"
   },
