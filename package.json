@@ -1,6 +1,5 @@
 {
   "name": "vercel-hono",
-  "type": "module",
   "scripts": {
     "dev": "tsx watch src/serve.ts",
     "start": "vercel dev",
