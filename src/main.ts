@@ -1,6 +1,6 @@
 import { Hono } from 'hono'
 
-export const app = new Hono()
+const app = new Hono()
 
 app.get('/health', (c) => {
   return c.text('OK')
@@ -13,3 +13,5 @@ api.get('/', (c) => {
 })
 
 app.route('/api', api)
+
+export default app;
