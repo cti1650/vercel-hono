@@ -1,7 +1,12 @@
 import { Hono } from "hono";
 import baseApp from "./router/base";
+import { serveStatic } from "@hono/node-server/serve-static";
 
 const app = new Hono();
+
+app.use("/static/*", serveStatic({ root: "./" }));
+
+app.use("/", serveStatic({ path: "static/index.html" }));
 
 app.get("/test", (c) => {
   return c.json({ status: 200, message: "hello world!" });
